@@ -1,0 +1,45 @@
+HTML NOTES
+
+WORKING WITH TEXT
+
+1.Paragraphs(<p> tag)
+
+ ->start tag<p>
+ ->end tag</p>
+ 
+2.Headings(<h1> tag)
+
+ ->There are 6 different levels of headings starting from <h1> to <h6>
+ ->have start tag and end tag
+ ->like this:<h1></h1>
+ -><h2></h2>
+ 
+3.Strong Element(<strong> tag)
+
+ ->The <strong> element makes text bold
+ -><strong> tag
+
+4.Em Element(<em> tag)
+
+ ->The em element makes text italic
+ -><em>... </em>
+
+5.HTML Comments
+
+ ->like this:<!-- I am a html comment -->
+ 
+WORKING WITH LIST
+
+1.Unordered list(<ul> tag)
+  
+ -><ul>
+        <li> ..</li>
+	  <li>..</li>
+   </ul>
+   
+2.Ordered list (<ol> tag)
+ 
+  -><ol>
+        <li>..</li>
+        <li>..</li>
+    </ol>

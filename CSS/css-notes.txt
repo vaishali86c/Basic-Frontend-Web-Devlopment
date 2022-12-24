@@ -1,0 +1,274 @@
+*CSS*
+
+//BASIC SYNTAX//
+ 
+div.bold-text {
+  font-weight: 700;
+}
+
+1.//SELECTORS//
+
+1.Universal Selectors
+
+ ->The universal selector will select elements of any type, hence the name “universal”,
+   and the syntax for it is a simple asterisk(*).
+   
+ ->example:* {
+              color: purple;
+             }
+			 
+			 
+2.Type Selector
+
+ ->A type selector (or element selector) will select all elements of the given element type, 
+   and the syntax is just the name of the element.
+ ->example:/* styles.css */
+
+            div {
+                 color: white;
+                }
+
+3.Class Selectors
+
+ ->Class selectors will select all elements with the given class.
+ ->example:
+            <!-- index.html -->
+
+              <div class="alert-text">
+                 Please agree to our terms of service.
+              </div>
+			  
+			   
+            /* styles.css */
+
+            .alert-text {
+                color: red;
+            }
+ ->Another thing you can do with the class attribute is to add multiple classes to a 
+   single element as a space-separated list, such as class="alert-text severe-alert".
+ 
+4.ID Selectors
+
+ ->ID selectors are similar to class selectors. They select an element with the given ID, 
+   which is another attribute you place on an HTML element
+ ->example:
+           <!-- index.html -->
+
+           <div id="title">My Awesome 90's Page</div>
+             
+			/* styles.css */
+
+            #title {
+                background-color: red;
+            }
+5.Grouping Selector		
+
+ ->	example:           
+           .read {
+              color: white;
+              background-color: black;
+   
+              /* several unique declarations */
+            }
+
+           .unread {
+              color: white;
+              background-color: black;
+  
+              /* several unique declarations */
+            }
+ ->Both our .read and .unread selectors share the color: white; 
+   and background-color: black;			
+ ->we can group these two selectors
+   together as a comma-separated list
+ ->example:
+ 
+           .read,
+           .unread {
+               color: white;
+               background-color: black;
+            }
+ 
+           .read {
+               /* several unique declarations */
+            }
+
+           .unread {
+               /* several unique declarations */
+            }
+
+6.Chaining Selector
+
+ ->Another way to use selectors is to chain them as 
+   a list without any separation.
+ -> HTML :<div>
+            <div class="subsection header">Latest Posts</div>
+            <p class="subsection preview">This is where a preview for a post might go.</p>
+          </div> 
+    CSS :
+         .subsection.header {
+             color: red;
+         }
+ -> can also used to chain a class and id.
+ 
+7.Descendant Combinator 
+
+ ->example: HTML:
+				<!-- index.html -->
+
+				<div class="ancestor"> <!-- A -->
+					<div class="contents"> <!-- B -->
+						<div class="contents"> <!-- C -->
+						</div>
+					</div>
+				</div>
+
+				<div class="contents"></div> <!-- D -->
+	        CSS:
+				/* styles.css */
+
+				.ancestor .contents {
+				/* some declarations */
+				}
+2.//Properties to Get Started With//
+
+
+    1.Color and Background-Color
+   
+     ->example:
+	 p {
+		/* hex example: */
+		color: #1100ff;
+		/* rgb example: */
+		color: rgb(100, 0, 127);
+		/* hsl example: */
+		color: hsl(15, 82%, 56%);
+		}
+	->   //CSS Colors//
+     
+	      Colors in CSS can be specified by the following methods:
+
+        1.Hexadecimal colors
+		2.Hexadecimal colors with transparency
+		3.RGB colors
+		4.RGBA colors
+		5.HSL colors
+		6.HSLA colors
+            7.Predefined/Cross-browser color names
+		8.With the currentcolor keyword
+         
+		      1.hexadecimal colors
+		 
+		        example:#p1 {background-color: #ff0000;}   /* red */
+                  	#p2 {background-color: #00ff00;}   /* green */
+                  	#p3 {background-color: #0000ff;}   /* blue */
+			2.RGB Colors
+		
+			  ->syntax:rgb(red, green, blue)
+			  ->example:#p1 {background-color: rgb(255, 0, 0);}   /* red */
+						#p2 {background-color: rgb(0, 255, 0);}   /* green */
+						#p3 {background-color: rgb(0, 0, 255);}   /* blue */
+			
+			3.RGBA Colors
+		
+			->syntax:rgba(red, green, blue, alpha)
+			->The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).
+			->example:
+					#p1 {background-color: rgba(255, 0, 0, 0.3);}   /* red with opacity */
+					#p2 {background-color: rgba(0, 255, 0, 0.3);}   /* green with opacity */
+					#p3 {background-color: rgba(0, 0, 255, 0.3);}   /* blue with opacity */
+			4.HSL Colors
+		
+				->HSL stands for hue, saturation, and lightness - and represents a cylindrical-coordinate representation of colors.
+
+				->An HSL color value is specified with the hsl() function, which has the following syntax:
+
+				->syntax:hsl(hue, saturation, lightness)
+				->example:
+						#p1 {background-color: hsl(120, 100%, 50%);}   /* green */
+						#p2 {background-color: hsl(120, 100%, 75%);}   /* light green */
+						#p3 {background-color: hsl(120, 100%, 25%);}   /* dark green */
+						#p4 {background-color: hsl(120, 60%, 70%);}    /* pastel green */
+			5.HSLA colors
+			
+				->same as hsl only alpha added to it.
+		
+			6.Predefined/Cross-browser Color Names
+		  
+				->140 color names are predefined in the HTML and CSS color specification.
+
+				->For example: blue, red, coral, brown, 
+				->example:#p1 {background-color: blue;}
+			
+			7.The currentcolor Keyword
+	
+	2.Typography Basics and Text-Align 
+        
+
+	    ->font-family can be a single value or a comma-separated list of values that determine what font an element uses. 
+            Each font will fall into one of two categories, either a “font family name” like "Times New Roman" 
+            (we use quotes due to the whitespace between words) or a “generic family name”
+            like sans-serif (generic family names never use quotes).	
+	    ->example:font-family: "Times New Roman", sans-serif;
+	    ->use font like this ^
+	    ->1.font-size will, as the property name suggests, set the size of the font.
+				->size: 22px has no space between “22” and “px”.
+		->2.font-weight affects the boldness of text, assuming the font supports the specified weight
+				->font-weight: 700 (the equivalent of bold)
+		->3.text-align will align text horizontally within an elements
+				->text-align: center
+				
+    3.Image Height and Width
+	  
+	    ->img {
+				height: auto;
+				width: 500px;
+		  }
+		-> If you wanted to adjust the size of the image without causing it to lose its proportions, you would use a value of “auto” 
+		   for the height property and adjust the width value
+		   
+3.THE Cascade of CSS
+
+    1.Specificity:
+     
+	  1.ID selectors (most specific selector)
+      2.Class selectors
+	  3.Type selectors
+	  
+	2.Inheritance
+	
+	->Inheritance refers to certain CSS properties that, when applied to an element, are inherited by that element’s descendants, even if
+    	we don’t explicitly write a rule for those descendants
+
+	3.Rule Order
+	
+4.ADDING CSS TO HTML
+
+    1.EXTERNAL CSS*
+     
+	  ->link to the self closing link tag
+	 
+    2.INTERNAL CSS*
+	  
+	  ->like this:
+				<head>
+					<style>
+						div {
+							color: white;
+							background-color: black;
+						}
+
+						p {
+							color: red;
+						}
+					</style>
+				</head>
+				<body>...</body>
+	 3.INLINE CSS*
+	   
+	    ->like this :
+					<body>
+						<div style="color: white; background-color: black;">...</div>
+					</body>
+
+	  

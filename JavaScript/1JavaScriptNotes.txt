@@ -1,0 +1,101 @@
+////JavaScript Notes////
+
+1.console.log command
+
+  ->console.log() is the command to print something to the 
+    developer console in your browser. 
+	
+
+2.
+
+   ->Another way to include JavaScript in a webpage is through an external script.
+   ->This is very similar to linking external CSS docs to your website.
+   ->like this====><script src="javascript.js"></script>
+   ->JavaScript files have the extension .js similar to .css for stylesheets. External
+     JavaScript files are used for more complex scripts.
+	 
+3.variable:
+
+    ->create a variable in JavaScript — the var statement. But in the newest JavaScript versions we have two more ways — 
+     let and 
+     const.
+    ->example:let message;
+
+             message = 'Hello!';
+
+             message = 'World!'; // value changed
+
+             alert(message);
+	->variable naming:
+	   
+	     ->What’s interesting – the dollar sign '$' and the underscore '_' can also be used in names. They are regular symbols, just like letters,
+      		 without any special meaning.
+		 ->example:	
+					let $ = 1; // declared a variable with the name "$"
+					let _ = 2; // and now a variable with the name "_"
+
+					alert($ + _); // 3
+					
+4.Numbers
+
+    ->**JavaScript Arithmetic Operators**
+	
+      Arithmetic operators perform arithmetic on numbers (literals or variables).
+
+        Operator	Description
+        
+			+		Addition
+			-		Subtraction
+			*		Multiplication
+			**		Exponentiation (ES2016)
+			/		Division
+			%		Modulus (Remainder)
+			++		Increment
+			--		Decrement
+	->The numbers (in an arithmetic operation) are called operands.
+
+    ->The operation (to be performed between the two operands) is defined by an operator.
+	->**Exponentiation**
+	
+        ->The exponentiation operator (**) raises the first operand to the power of the second operand.
+		->x ** y produces the same result as Math.pow(x,y)
+	
+	->**Operator Precedence**
+	
+        ->Multiplication (*) and division (/) have higher precedence than addition (+) and subtraction (-).
+	
+5.JavaScript Numbers
+
+  
+    ->JavaScript Numbers are Always 64-bit Floating Point.
+	1.Integer Precision
+	
+        ->Integers (numbers without a period or exponent notation) are accurate up to 15 digits.
+	  
+	2.Floating Precision
+	
+        ->Floating point arithmetic is not always 100% accurate
+	 
+	3.Numeric Strings
+		->JavaScript strings can have numeric content:
+
+		->example:let x = 100;         // x is a number
+
+				  let y = "100";       // y is a string
+				  
+	4.NaN - Not a Number
+	
+		->NaN is a JavaScript reserved word indicating that a number is not a legal number.
+		  Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):
+		
+	5.Infinity
+	
+		->Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+		
+	6.Hexadecimal
+	
+		->JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x.
+		
+JavaScript number as objects
+  ->When using the == operator, x and y are equal:
+  ->When using the === operator, x and y are not equal.
